@@ -2,22 +2,11 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "C/Python: build and run current file",
+      "label": "C: build and run current file",
       "type": "shell",
-      "command": "bash",
-      "args": [
-        "-c",
-        "case \"${fileExtname}\" in .py) python3 \"${file}\" ;; .c) gcc -Wall -Wextra -std=c11 \"${file}\" -o \"/tmp/${fileBasenameNoExtension}\" && \"/tmp/${fileBasenameNoExtension}\" ;; *) echo \"Unsupported file type: ${fileExtname}\"; exit 1 ;; esac"
-      ],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "presentation": {
-        "reveal": "always",
-        "panel": "dedicated",
-        "clear": true
-      },
+      "command": "gcc -Wall -Wextra -std=c11 \"${file}\" -o \"/tmp/${fileBasenameNoExtension}\" && \"/tmp/${fileBasenameNoExtension}\"",
+      "group": { "kind": "build", "isDefault": true },
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": true },
       "problemMatcher": ["$gcc"]
     }
   ]
