@@ -4,7 +4,7 @@
     {
       "label": "C: build and run current file",
       "type": "shell",
-      "command": "gcc -Wall -Wextra -std=c11 \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}\" && \"${fileDirname}/${fileBasenameNoExtension}\"",
+      "command": "gcc -Wall -Wextra -std=c11 \"${file}\" -o \"/tmp/${fileBasenameNoExtension}\" && \"/tmp/${fileBasenameNoExtension}\"",
       "group": {
         "kind": "build",
         "isDefault": true
