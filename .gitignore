@@ -1,4 +1,4 @@
-﻿# Python
+# Python
 __pycache__/
 *.py[cod]
 .venv/
@@ -10,6 +10,11 @@ venv/
 *.obj
 *.exe
 *.out
+
+# Local build output
+/hello
+/c-practice/day01
+wget-log
 
 # OS
 .DS_Store
